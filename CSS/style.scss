@@ -1,0 +1,333 @@
+@import "media_mixins";
+@import "normalize";
+@import "vars_and_mixins";
+%primary_text{
+    font-family: Josefin Sans;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 4.800000190734863px;
+}
+%secondary_text{
+    font-family: Aleo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1.399999976158142px;
+}
+
+$primary-font: 'Josefin Sans', sans-serif;
+.wrapper{
+    font-family: $primary-font;
+   
+.menu{
+    @extend %secondary_text;
+    @include flex(space-around, center, row);
+    background-color: #5474FD;
+    &__name{
+        color:white;
+        font-family: Josefin Sans;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 2.4000000953674316px;
+        text-transform: uppercase;
+    }
+}
+}
+.nav{
+    margin: 32px 0 25px 0;
+}
+.nav ul{
+        @include flex(space-around, center, row);
+        list-style: none;
+        background-color: #5474FD;
+}
+.nav li a{
+    display: block;
+    padding-right: 12px;
+    @extend %secondary_text;
+    color: #FFFFFF;
+    font-family: Aleo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    &:hover{
+        color: black;
+        transition: 1s ease-in;
+        border-radius: 20px;
+    }
+}
+    @media screen and (max-width: 680px) {
+        .menu__ad-menu{
+            margin: 32px 0 25px 0;
+        }
+        
+        .menu__ad-menu li {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .menu__ad-menu ul {
+          display: none;
+        }
+        .menu__ad-menu nav::before,
+        .menu__ad-menu::after {
+          content: '';
+          position: fixed;
+          top: 0;
+          right: 0;
+          display: block;
+          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAMAAAA8VkqRAAAABlBMVEUAAAAAAAClZ7nPAAAAAXRSTlMAQObYZgAAAE5JREFUeAFjwAkYcQC6SFAKBt4fo/6AaMMUQTUQIYJpFaqrMIICzkATR2Hi5uDUjmkh7tDAHUq4Qw8ujl+CsFEEHDVowg1n1OJKDLiTDwBLrgJ9vkuXOwAAAABJRU5ErkJggg==);
+          cursor: pointer;
+          height: 24px;
+          width: 24px;
+        }
+        .menu__ad-menu nav::before,
+        .menu__ad-menu::after {
+          background-color: #5474FD;
+          border: 9px solid #5474FD;
+        }
+        .menu__ad-menu::after {
+          background-position: -24px -24px;
+          z-index: 1;
+          
+        }
+        .menu__ad-menu nav::before {
+          z-index: 2;
+          
+        }
+        .menu__ad-menu nav:focus::before {
+          z-index: 0;
+        }
+        .menu__ad-menu nav:focus ul,
+        .menu__ad-menu ul:hover { 
+          display: block;
+        }
+        }
+
+.Choose-Us{
+    background-image: url(../img/Rectangle\ 41444.png); 
+    @include flex(space-around, center, row);
+    &__text{
+        width: 560px;
+        padding-left: 40px;
+        margin-right: 20px;
+        &-header{
+            @extend %secondary_text;
+            color:#FFFFFF;         
+            font-size: 36px;
+            letter-spacing: 0px;
+            padding-bottom: 50px;
+            min-width: 288px;
+        }
+        &-article{
+            @extend %primary_text;
+            color: #E8E8E8;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1.600000023841858px;
+            padding-bottom: 50px;
+        }
+        &-btn{
+            text-decoration: none;
+            @extend %secondary_text;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 1.2000000476837158px;
+            background-color: #5474FD;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            padding: 21px 40px 16px 40px;
+            &:hover{
+                background-color: blue;
+                transition: 1s ease-in;
+                border-radius: 20px;
+            }
+        }
+    }
+    &__img{
+        margin-bottom: 120px;
+        margin-top: 118px;
+        display: flex;
+        flex-direction: column;
+        &-One{
+            margin-bottom: 10px;
+            object-fit: contain;
+            height: 220px;
+            width: 350px;
+
+        }
+        &-Two{
+            height: 220px;
+            width: 350px;
+            object-fit: contain;
+            margin-left: 90px;
+            
+        }
+    }
+}
+.Advantages{
+    @include flex(space-around, center, row);
+    background-color:#333333;
+    box-sizing: content-box;
+    &__rewiev{
+        @include flex(space-around, center, column);
+        padding-top: 100px;
+        padding-bottom: 100px;
+        &-card{
+            object-fit: contain;
+            padding-bottom: 38px;
+        }
+        &-description{
+            @extend %secondary_text;
+            color: #FFFFFF;
+            font-size: 36px; 
+            letter-spacing: 0px;
+            text-align: center;
+        }
+    }
+}
+.Card{
+    @include flex(flex-start, flex-start, column);
+    padding-top: 49px;
+    background-color: #232323;
+    opacity: 90%;
+    width: 543px;
+    
+    &-preheader{
+        @extend %primary_text;
+        color:#FFFFFF;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+    }
+    &-header{
+        @extend %primary_text;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        color:#FFFFFF;
+        text-transform: uppercase;
+
+    }
+    &-description{
+        @extend %primary_text;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        color:#FFFFFF;
+
+    }
+}
+.FirstAbout{
+    background-image: url(../img/Rectangle\ 414\ 45.png);
+    background-repeat: no-repeat;
+    padding-top: 220px;
+    padding-bottom: 100px;
+    &__CardOne{
+        padding-left: 32px;
+        &-preheader{
+            padding-bottom: 23px;
+        }
+        &-header{
+            padding-bottom: 13px;
+        }
+        &-description{
+            padding-bottom: 46px;
+        }
+        &-btn{
+            margin-bottom: 50px;
+        }
+    }
+}
+.SecondAbout{
+    @include flex(flex-start, flex-end, column);
+    background-image: url(../img/rect.png);
+    padding-top: 220px;
+    padding-bottom: 100px;
+    padding-right:329px;
+    &__CardTwo{
+        padding-left: 32px;
+        &-preheader{
+            padding-bottom: 23px;
+        }
+        &-header{
+            padding-bottom: 13px;
+        }
+        &-description{
+            padding-bottom: 46px;
+        }
+        &-btn{
+            margin-bottom: 50px;
+        }
+    }
+}
+.OurUs{
+    @include flex(center, center, column);
+    background-image: url(../img/Rectangle\ 4142\ 1.png);
+    &-header{
+        @extend %secondary_text;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0px;
+        color:#FFFFFF;
+        padding-top: 128px;
+        padding-bottom: 91px;
+    }
+    &__card{
+        @include flex(space-around, space-around, row);
+        padding-bottom: 200px;
+    }
+    &__description{   
+        @include flex(flex-start, flex-start, column);
+        width: 581px;
+        background-color: #333333;
+        padding: 39px 62px 39px 25px;
+        &-header{
+            text-transform: uppercase;
+            @extend %primary_text;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            color:#FFFFFF;
+        }
+        &-text{
+            padding-top: 8px;
+            @extend %primary_text;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+    }
+}
+.footer{
+    background-color: #232323;
+    @include flex(center, center, column);
+    color: #FFFFFF;
+    &-header{
+        padding-top: 122px;
+        text-transform: uppercase;
+        @extend %primary_text;
+        font-size: 24px;
+        letter-spacing: 3.359999895095825px;
+    }
+    &-postheader{
+        padding-top: 8px;
+        @extend %primary_text;
+        font-size: 16px;
+        font-weight: 400;  
+        letter-spacing: 1.600000023841858px;
+    }
+    &__image{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        &-pic{
+            padding: 0 10px;
+        }
+    }
+}
